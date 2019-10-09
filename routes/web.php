@@ -7,3 +7,7 @@ Route::get('/', function () {
 
 
 Route::resource('inventarios','InventarioController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
