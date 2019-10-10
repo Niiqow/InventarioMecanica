@@ -11,6 +11,7 @@
 
 
 <div class="jumbotron text-center">
+<a class="btn btn-primary" href="/" role="button">Volver</a>
   <h1>Inventario Mecánica </h1>
   <p>INACAP</p>
 </div>
