@@ -72,7 +72,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  background-color: #ffffff;
 }
 
 [tabindex="-1"]:focus {
@@ -4374,6 +4374,8 @@ input[type=button].btn-block {
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
+
+
 }
 
 .navbar-nav {
@@ -4418,6 +4420,8 @@ input[type=button].btn-block {
 .navbar-toggler:hover,
 .navbar-toggler:focus {
   text-decoration: none;
+
+  color: #ffffff;
 }
 
 .navbar-toggler-icon {
