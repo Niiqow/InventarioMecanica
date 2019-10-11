@@ -1,4 +1,6 @@
-@extends('inventarios.layout')
+
+@extends('layouts.app')
+
 
 
 @section('content')
@@ -28,9 +30,9 @@
 
             <th>Nombre</th>
             <th>Descripcion</th>
-            <th>cantidad</th>
-            <th>codigo</th>
-            <th width="250px">Action</th>
+            <th>Cantidad</th>
+            <th>Código</th>
+            <th width="250px">Acción</th>
         </tr>
         @foreach ($inventarios as $inventario)
         <tr>
