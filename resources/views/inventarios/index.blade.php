@@ -25,20 +25,19 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
+
             <th>Nombre</th>
-            <th>Cantidad</th>
-            <th>Lugar</th>
-            <th>Tipo</th>
+            <th>Descripcion</th>
+            <th>cantidad</th>
+            <th>codigo</th>
             <th width="250px">Action</th>
         </tr>
         @foreach ($inventarios as $inventario)
         <tr>
-            <td>{{ ++$i }}</td>
             <td>{{ $inventario->nombre }}</td>
+            <td>{{ $inventario->descripcion }}</td>
             <td>{{ $inventario->cantidad }}</td>
-            <td>{{ $inventario->lugar }}</td>
-            <td>{{ $inventario->tipo }}</td>
+            <td>{{ $inventario->codigo }}</td>
             <td>
                 <form action="{{ route('inventarios.destroy',$inventario->id) }}" method="POST">
 

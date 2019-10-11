@@ -36,22 +36,22 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>Descripcion:</strong>
+                    <textarea class="form-control" style="height:150px" name="descripcion" placeholder="Descripcion">{{ $inventario->cantidad }}</textarea>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Cantidad:</strong>
-                    <textarea class="form-control" style="height:150px" name="cantidad" placeholder="Cantidad">{{ $inventario->cantidad }}</textarea>
+                    <textarea class="form-control" style="height:150px" name="cantidad" placeholder="Cantidad">{{ $inventario->lugar }}</textarea>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Lugar:</strong>
-                    <textarea class="form-control" style="height:150px" name="lugar" placeholder="Lugar">{{ $inventario->lugar }}</textarea>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Tipo:</strong>
-                    <textarea class="form-control" style="height:150px" name="tipo" placeholder="Tipo">{{ $inventario->tipo }}</textarea>
+                    <strong>Codigo:</strong>
+                    <textarea class="form-control" style="height:150px" name="codigo" placeholder="Codigo">{{ $inventario->tipo }}</textarea>
                 </div>
             </div>
 

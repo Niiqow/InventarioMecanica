@@ -34,21 +34,21 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Cantidad:</strong>
-                <textarea class="form-control" style="height:280px" name="cantidad" placeholder="Cantidad"></textarea>
+                <strong>Descripcion:</strong>
+                <textarea class="form-control" style="height:280px" name="descripcion" placeholder="Descripcion"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
-               <strong>Lugar:</strong>
-               <textarea class="form-control" style="height:280px" name="lugar" placeholder="Lugar"></textarea>
+               <strong>Cantidad:</strong>
+               <textarea class="form-control" style="height:280px" name="cantidad" placeholder="Cantidad"></textarea>
           </div>
       </div>
 
       <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
-             <strong>Tipo:</strong>
-             <textarea class="form-control" style="height:280px" name="tipo" placeholder="Tipo"></textarea>
+             <strong>Codigo:</strong>
+             <textarea class="form-control" style="height:280px" name="codigo" placeholder="Codigo"></textarea>
           </div>
       </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

@@ -44,9 +44,9 @@ class InventarioController extends Controller
     {
         $request->validate([
             'nombre' => 'required',
+            'descripcion' => 'required',
             'cantidad' => 'required',
-            'lugar' => 'required',
-            'tipo' => 'required',
+            'codigo' => 'required',
         ]);
 
         Inventario::create($request->all());
@@ -87,10 +87,10 @@ class InventarioController extends Controller
     public function update(Request $request, Inventario $inventario)
     {
           $request->validate([
-              'nombre' => 'required',
-              'cantidad' => 'required',
-                'lugar' => 'required',
-                  'tipo' => 'required',
+                'nombre' => 'required',
+                'descripcion' => 'required',
+                'cantidad' => 'required',
+                'codigo' => 'required',
           ]);
 
           $inventario->update($request->all());
