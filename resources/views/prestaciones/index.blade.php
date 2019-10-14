@@ -6,12 +6,14 @@
 
 
 
+
+<div class="container">
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
             </div>
-            <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('prestaciones.create') }}">Nueva Persona</a>
+            <div class="pull-right mb-4">
+                <a class="btn btn-danger" href="{{ route('prestaciones.create') }}">Nueva Persona</a>
             </div>
         </div>
     </div>
@@ -56,5 +58,5 @@
     </table>
 
     {!! $prestaciones->links() !!}
-
+</div>
 @endsection

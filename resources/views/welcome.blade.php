@@ -138,7 +138,12 @@
                 </div>
 
                 <div class="links">
-                    <a href="inventarios">Ingresar al inventario</a>
+                    <a href="inventarios">Ingresar a Módulo de Inventario</a>
+
+                </div>
+<br />
+                <div class="links">
+                    <a href="prestaciones">Ingresar a Módulo de Prestaciones</a>
 
                 </div>
             </div>

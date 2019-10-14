@@ -2,13 +2,15 @@
 
 @section('content')
 <div class="container">
+
+
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Nuevo Producto</h2>
+            <h2>Nueva Persona</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('inventarios.index') }}">Volver</a>
+            <a class="btn btn-primary" href="{{ route('prestaciones.index') }}">Volver</a>
         </div>
     </div>
 </div>
@@ -24,32 +26,32 @@
     </div>
 @endif
 
-<form action="{{ route('inventarios.store') }}" method="POST">
+<form action="{{ route('prestaciones.store') }}" method="POST">
     @csrf
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Nombre:</strong>
-                <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                <strong>RUT:</strong>
+                <input type="text" name="rut" class="form-control" placeholder="RUT">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Descripcion:</strong>
-                <textarea class="form-control" style="height:280px" name="descripcion" placeholder="Descripcion"></textarea>
+                <strong>Nombre:</strong>
+                <textarea class="form-control" style="height:280px" name="nombre" placeholder="Nombre"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
-               <strong>Cantidad:</strong>
-               <textarea class="form-control" style="height:280px" name="cantidad" placeholder="Cantidad"></textarea>
+               <strong>Correo:</strong>
+               <textarea class="form-control" style="height:280px" name="correo" placeholder="Correo"></textarea>
           </div>
       </div>
 
       <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
-             <strong>Codigo:</strong>
-             <textarea class="form-control" style="height:280px" name="codigo" placeholder="Codigo"></textarea>
+             <strong>Rol:</strong>
+             <textarea class="form-control" style="height:280px" name="rol" placeholder="Rol"></textarea>
           </div>
       </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
@@ -58,5 +60,5 @@
     </div>
 
 </form>
- </div>
+</div>
 @endsection
