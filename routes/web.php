@@ -8,6 +8,8 @@ Route::get('/', function () {
 
 Route::resource('inventarios','InventarioController');
 
+Route::resource('prestaciones', 'PrestacionController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
