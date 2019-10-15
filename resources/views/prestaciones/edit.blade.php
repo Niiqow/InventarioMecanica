@@ -16,7 +16,7 @@
 
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Error</strong> Hubo algunos problemas al agregar información.<br><br>
+            <strong>Error</strong>Verifique que esten todos los campos.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -25,7 +25,7 @@
         </div>
     @endif
 
-    <form action="{{ route('prestaciones.update',$prestacion->id) }}" method="POST">
+<form action="{{ route('prestaciones.update',$prestacion->id) }}" method="POST">
         @csrf
         @method('PUT')
 
