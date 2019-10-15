@@ -9,7 +9,7 @@
                 <h2 class="text-center">Ver Persona</h2>
             </div>
             <div class="pull-right mb-5 mt-4">
-                <a class="btn btn-danger" href="{{ route('prestaciones.index') }}">Volver</a>
+                <a class="btn btn-danger" href="{{ route('personas.index') }}">Volver</a>
             </div>
         </div>
     </div>
@@ -18,13 +18,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nombre:</strong>
-                {{ $prestacion->rut }}
+                {{ $persona->nombre }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Cantidad:</strong>
-                {{ $prestacion->nombre }}
+                <strong>Correo:</strong>
+                {{ $persona->correo }}
             </div>
         </div>
     </div>

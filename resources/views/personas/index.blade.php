@@ -1,19 +1,20 @@
+
 @extends('layouts.app')
 
 
 
 @section('content')
 
-
-
-
 <div class="container">
+
+
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
             </div>
             <div class="pull-right mb-4">
-                <a class="btn btn-danger" href="{{ route('prestaciones.create') }}">Nueva Persona</a>
+                <a class="btn btn-danger" href="{{ route('personas.create') }}">Nueva Persona</a>
             </div>
         </div>
     </div>
@@ -28,26 +29,26 @@
     <table class="table table-bordered">
         <tr>
 
-            <th>Rut</th>
+            <th>RUT</th>
             <th>Nombre</th>
             <th>Correo</th>
             <th>Número</th>
             <th>Rol</th>
             <th width="250px">Acción</th>
         </tr>
-        @foreach ($prestaciones as $prestacion)
+        @foreach ($personas as $persona)
         <tr>
-            <td>{{ $prestacion->rut }}</td>
-            <td>{{ $prestacion->nombre }}</td>
-            <td>{{ $prestacion->correo }}</td>
-            <td>{{ $prestacion->numero }}</td>
-            <td>{{ $prestacion->rol }}</td>
+            <td>{{ $persona->rut }}</td>
+            <td>{{ $persona->nombre }}</td>
+            <td>{{ $persona->correo }}</td>
+            <td>{{ $persona->numero }}</td>
+            <td>{{ $persona->rol }}</td>
             <td>
-                <form action="{{ route('prestaciones.destroy',$prestacion->id) }}" method="POST">
+                <form action="{{ route('personas.destroy',$persona->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('prestaciones.show',$prestacion->id) }}">Ver</a>
+                    <a class="btn btn-success" href="{{ route('personas.show',$persona->id) }}">Ver</a>
 
-                    <a class="btn btn-primary" href="{{ route('prestaciones.edit',$prestacion->id) }}">Editar</a>
+                    <a class="btn btn-primary" href="{{ route('personas.edit',$persona->id) }}">Editar</a>
 
                     @csrf
                     @method('DELETE')
@@ -59,6 +60,6 @@
         @endforeach
     </table>
 
-    {!! $prestaciones->links() !!}
+    {!! $personas->links() !!}
 </div>
 @endsection

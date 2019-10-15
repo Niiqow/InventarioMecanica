@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -143,7 +142,7 @@
                 </div>
 <br />
                 <div class="links">
-                    <a href="prestaciones">Ingresar a Módulo de Prestaciones</a>
+                    <a href="personas">Ingresar a Módulo de Prestaciones</a>
 
                 </div>
             </div>

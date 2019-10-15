@@ -44,7 +44,7 @@
             <td>
                 <form action="{{ route('inventarios.destroy',$inventario->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('inventarios.show',$inventario->id) }}">Ver</a>
+                    <a class="btn btn-success" href="{{ route('inventarios.show',$inventario->id) }}">Ver</a>
 
                     <a class="btn btn-primary" href="{{ route('inventarios.edit',$inventario->id) }}">Editar</a>
 
