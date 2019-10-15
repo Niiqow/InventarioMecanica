@@ -7,10 +7,10 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Nueva Persona</h2>
+            <h2 class="text-center">Nueva Persona</h2>
         </div>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('prestaciones.index') }}">Volver</a>
+        <div class="pull-right mb-4 mt-4">
+            <a class="btn btn-danger" href="{{ route('prestaciones.index') }}">Volver</a>
         </div>
     </div>
 </div>
@@ -38,24 +38,39 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nombre:</strong>
-                <textarea class="form-control" style="height:280px" name="nombre" placeholder="Nombre"></textarea>
+                  <input type="text" name="nombre" class="form-control" placeholder="Nombre">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
                <strong>Correo:</strong>
-               <textarea class="form-control" style="height:280px" name="correo" placeholder="Correo"></textarea>
+                <input type="text" name="correo" class="form-control" placeholder="Correo">
           </div>
       </div>
 
       <div class="col-xs-12 col-sm-12 col-md-12">
+       <div class="form-group">
+             <strong>Numero:</strong>
+             <input type="number" name="numero" class="form-control" placeholder="Numero">
+       </div>
+   </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
              <strong>Rol:</strong>
-             <textarea class="form-control" style="height:280px" name="rol" placeholder="Rol"></textarea>
+             <select class="form-control" type="text" name="rol" class="form-control" placeholder="Rol">
+                   <option selected>Seleccione</option>
+                  <option value="Docente">Docente</option>
+                  <option value="Estudiante">Estudiante</option>
+            </select>
+
           </div>
       </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Agregar</button>
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-5">
+             <div class="mt-4">
+  <button type="submit" class="btn btn-danger">Agregar</button>
+             </div>
+
         </div>
     </div>
 

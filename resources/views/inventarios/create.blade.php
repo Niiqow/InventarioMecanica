@@ -5,10 +5,10 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Nuevo Producto</h2>
+            <h2 class="text-center">Nuevo Producto</h2>
         </div>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('inventarios.index') }}">Volver</a>
+        <div class="pull-right mb-4 mt-4">
+            <a class="btn btn-danger" href="{{ route('inventarios.index') }}">Volver</a>
         </div>
     </div>
 </div>
@@ -36,24 +36,24 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Descripcion:</strong>
-                <textarea class="form-control" style="height:280px" name="descripcion" placeholder="Descripcion"></textarea>
+                        <input type="text" name="descripcion" class="form-control" placeholder="Descipcion">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
                <strong>Cantidad:</strong>
-               <textarea class="form-control" style="height:280px" name="cantidad" placeholder="Cantidad"></textarea>
+                        <input type="number" name="cantidad" class="form-control" placeholder="Cantidad">
           </div>
       </div>
 
       <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
              <strong>Codigo:</strong>
-             <textarea class="form-control" style="height:280px" name="codigo" placeholder="Codigo"></textarea>
+                      <input type="text" name="codigo" class="form-control" placeholder="Codigo">
           </div>
       </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="submit" class="btn btn-danger">Agregar</button>
         </div>
     </div>
 

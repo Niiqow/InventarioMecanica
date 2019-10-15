@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="container">
+
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Editar Producto</h2>
+                <h2 class="text-center">Editar Producto</h2>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('inventarios.index') }}">Volver</a>
+            <div class="pull-right mb-4 mt-4">
+                <a class="btn btn-danger" href="{{ route('inventarios.index') }}">Volver</a>
             </div>
         </div>
     </div>
@@ -31,34 +35,36 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nombre:</strong>
-                    <input type="text" name="nombre" value="{{ $inventario->nombre }}" class="form-control" placeholder="Title">
+                    <input type="text" name="nombre" value="{{ $inventario->nombre }}" class="form-control" placeholder="Nombre">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Descripcion:</strong>
-                    <textarea class="form-control" style="height:150px" name="descripcion" placeholder="Descripcion">{{ $inventario->cantidad }}</textarea>
+                    <strong>Descripción:</strong>
+                     <input type="text" name="descripcion" value="{{ $inventario->descripcion }}" class="form-control" placeholder="Descripción">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Cantidad:</strong>
-                    <textarea class="form-control" style="height:150px" name="cantidad" placeholder="Cantidad">{{ $inventario->lugar }}</textarea>
+                     <input type="number" name="cantidad" value="{{ $inventario->cantidad }}" class="form-control" placeholder="Cantidad">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Codigo:</strong>
-                    <textarea class="form-control" style="height:150px" name="codigo" placeholder="Codigo">{{ $inventario->tipo }}</textarea>
+                    <strong>Código:</strong>
+                   <input type="text" name="codigo" value="{{ $inventario->codigo }}" class="form-control" placeholder="Código">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Editar</button>
+              <button type="submit" class="btn btn-danger">Editar</button>
             </div>
         </div>
 
     </form>
+
+    </div>
 @endsection

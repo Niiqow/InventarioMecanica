@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Prestacion;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class PrestacionController extends Controller
     public function index()
     {
           $prestaciones = Prestacion::latest()->paginate(5);
-         return view('prestaciones.index',compact('prestaciones'))->with('i',(request()->input('page',1)-1)*5);
+
+          return view('prestaciones.index',compact('prestaciones'))
+               ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -24,7 +27,7 @@ class PrestacionController extends Controller
      */
     public function create()
     {
-         return view('prestaciones.create');
+      return view('prestaciones.create');
     }
 
     /**
@@ -36,73 +39,75 @@ class PrestacionController extends Controller
     public function store(Request $request)
     {
           $request->validate([
-             'rut' => 'required',
-             'nombre' => 'required',
-             'correo' => 'required',
-             'rol' => 'required',
-          ]);
+                    'rut' => 'required',
+                    'nombre' => 'required',
+                    'correo' => 'required',
+                   'numero' => 'required',
+                   'rol' => 'required',
+                ]);
 
-          Prestacion::create($request->all());
+                Prestacion::create($request->all());
 
-          return redirect()->route('prestaciones.index')
-                          ->with('success','Producto agregado exitosamente.');
+                return redirect()->route('prestaciones.index')
+                                ->with('success','Persona creada.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Prestacion  $prestacion
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Prestacion $prestacion)
     {
-         return view('prestaciones.show',compact('prestacion'));
+ return view('prestaciones.show',compact('prestacion'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Prestacion  $prestacion
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Prestacion $prestacion)
     {
-        return view('prestaciones.edit',compact('prestacion'));
+       return view('prestaciones.edit',compact('prestacion'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Prestacion  $prestacion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Prestacion $prestacion)
     {
           $request->validate([
-              'rut' => 'required',
-              'nombre' => 'required',
-              'correo' => 'required',
-              'rol' => 'required',
-         ]);
+                'rut' => 'required',
+                'nombre' => 'required',
+                'correo' => 'required',
+               'numero' => 'required',
+               'rol' => 'required',
+           ]);
 
-         $prestacion->update($request->all());
+           $prestacion->update($request->all());
 
-         return redirect()->route('prestaciones.index')
-                        ->with('success','Producto actualizado exitosamente');
+           return redirect()->route('prestaciones.index')
+                           ->with('success','Persona actualizada.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Prestacion  $prestacion
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Prestacion $prestacion)
     {
           $prestacion->delete();
 
-       return redirect()->route('prestaciones.index')
-                       ->with('success','Producto eliminado exitosamente');
+        return redirect()->route('prestaciones.index')
+                        ->with('success','Persona eliminada');
     }
 }

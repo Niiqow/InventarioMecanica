@@ -31,6 +31,7 @@
             <th>Rut</th>
             <th>Nombre</th>
             <th>Correo</th>
+            <th>Número</th>
             <th>Rol</th>
             <th width="250px">Acción</th>
         </tr>
@@ -39,6 +40,7 @@
             <td>{{ $prestacion->rut }}</td>
             <td>{{ $prestacion->nombre }}</td>
             <td>{{ $prestacion->correo }}</td>
+            <td>{{ $prestacion->numero }}</td>
             <td>{{ $prestacion->rol }}</td>
             <td>
                 <form action="{{ route('prestaciones.destroy',$prestacion->id) }}" method="POST">

@@ -1,24 +1,16 @@
 
 @extends('layouts.app')
-
-
-
 @section('content')
-
-
-<div class="container">
-
-
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
+                <h2>Laravel 5.7 CRUD Example from scratch - ItSolutionStuff.com</h2>
             </div>
-            <div class="pull-right pull-right mb-4">
-                <a class="btn btn-danger" href="{{ route('inventarios.create') }}">Nuevo Producto</a>
+            <div class="pull-right">
+                <a class="btn btn-success" href="{{ route('prestaciones.create') }}"> Create New Product</a>
             </div>
         </div>
     </div>
-
 
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -28,36 +20,39 @@
 
     <table class="table table-bordered">
         <tr>
-
+            <th>No</th>
+            <th>Rut</th>
             <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Cantidad</th>
-            <th>Código</th>
-            <th width="250px">Acción</th>
+            <th>Correo</th>
+                  <th>Numero</th>
+                        <th>Rol</th>
+            <th width="280px">Action</th>
         </tr>
-        @foreach ($inventarios as $inventario)
+        @foreach ($prestaciones as $prestacion)
         <tr>
-            <td>{{ $inventario->nombre }}</td>
-            <td>{{ $inventario->descripcion }}</td>
-            <td>{{ $inventario->cantidad }}</td>
-            <td>{{ $inventario->codigo }}</td>
+            <td>{{ ++$i }}</td>
+            <td>{{ $prestacion->rut }}</td>
+            <td>{{ $prestacion->nombre }}</td>
+                  <td>{{ $prestacion->correo }}</td>
+                        <td>{{ $prestacion->numero }}</td>
+                                    <td>{{ $prestacion->rol }}</td>
             <td>
-                <form action="{{ route('inventarios.destroy',$inventario->id) }}" method="POST">
+                <form action="{{ route('prestaciones.destroy',$prestacion->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('inventarios.show',$inventario->id) }}">Ver</a>
+                    <a class="btn btn-info" href="{{ route('prestaciones.show',$prestacion->id) }}">Show</a>
 
-                    <a class="btn btn-primary" href="{{ route('inventarios.edit',$inventario->id) }}">Editar</a>
+                    <a class="btn btn-primary" href="{{ route('prestaciones.edit',$prestacion->id) }}">Edit</a>
 
                     @csrf
                     @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </td>
         </tr>
         @endforeach
     </table>
 
-    {!! $inventarios->links() !!}
-</div>
+    {!! $prestaciones->links() !!}
+
 @endsection

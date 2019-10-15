@@ -8,7 +8,7 @@ Route::get('/', function () {
 
 Route::resource('inventarios','InventarioController');
 
-Route::resource('prestaciones', 'PrestacionController');
+Route::resource('prestaciones','PrestacionController');
 
 Auth::routes();
 
