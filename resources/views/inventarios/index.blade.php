@@ -61,3 +61,7 @@
     {!! $inventarios->links() !!}
 </div>
 @endsection
+
+@section('scripts')
+<script src="{{ asset('/js/typeahead.bundle.min.js') }}"></script>
+@endsection

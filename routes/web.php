@@ -12,13 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user');
 });
 
 Auth::routes();
 
-Route::resource('inventarios','InventarioController');
+Route::middleware(['admin'])->group(function () {
 
-Route::resource('personas','PersonaController');
+      Route::resource('inventarios','InventarioController');
+
+      Route::resource('personas','PersonaController');
+
+});
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -133,7 +133,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                      Sistema de inventario
+                      Sistema de inventario ADMIN
                 </div>
 
                 <div class="links">
