@@ -10,14 +10,24 @@
 
 
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="col-lg-12 margin-tb text-right">
             <div class="pull-left">
             </div>
             <div class="pull-right mb-4">
                 <a class="btn btn-danger" href="{{ route('inventarios.create') }}">Nuevo Producto</a>
             </div>
+
         </div>
-    </div>
+
+        <div class="col-5">
+                      <input type="text" placeholder="Buscar producto" class="form-control" name="query">
+                      <button type="submit" class="btn btn-danger mt-3">Buscar</button>
+
+        </div>
+
+</div>
+
+
 
 
     @if ($message = Session::get('success'))
@@ -26,7 +36,7 @@
         </div>
     @endif
 
-    <table class="table table-bordered">
+    <table class="table table-bordered mt-4">
         <tr>
 
             <th>Nombre</th>

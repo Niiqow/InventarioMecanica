@@ -20,6 +20,10 @@ class InventarioController extends Controller
      */
     public function index()
     {
+
+
+
+
         $inventarios = Inventario::latest()->paginate(5);
         return view('inventarios.index',compact('inventarios'))->with('i',(request()->input('page',1)-1)*5);
     }
@@ -64,6 +68,7 @@ class InventarioController extends Controller
      public function show(Inventario $inventario)
     {
         return view('inventarios.show',compact('inventario'));
+
     }
 
     /**

@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Inventario') }}</title>
-<link rel="shortcut icon" href="{{ asset('img/inacap.ico') }}" >
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 

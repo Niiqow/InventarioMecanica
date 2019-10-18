@@ -23,8 +23,14 @@ Route::middleware(['admin'])->group(function () {
 
       Route::resource('personas','PersonaController');
 
+      Route::get('/search','SearchController@show');
+
+
+
+
 });
 
+Route::resource('prestaciones','PrestacionController');
 
 
 Route::get('/home', 'HomeController@index')->name('home');

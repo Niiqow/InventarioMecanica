@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Sistema de prestaciones</title>
 
         <!-- Fonts -->
 
@@ -139,16 +139,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                      Sistema de inventario User
+                      Sistema de Prestaciones
                 </div>
 
                 <div class="links">
-                    <a href="inventarios">Ingresar a Módulo de Inventario</a>
+                    <a href="prestaciones">Ingresar a Módulo de Prestaciones</a>
 
                 </div>
-<br />
-                <div class="links">
-                    <a href="personas">Ingresar a Módulo de Prestaciones</a>
 
                 </div>
             </div>
