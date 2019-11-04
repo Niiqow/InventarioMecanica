@@ -7,7 +7,7 @@ use App\Inventario;
 
 class SearchController extends Controller
 {
-   public function show(Request $request){
+   public function show(Request $request){ //con request vamos a ingresar al texto de la consulta que a escrito el usuario
          $query = $request->input('query');
       //   dd($query);
          $inventarios = Inventario::where('nombre','like', "%$query%" )->get();

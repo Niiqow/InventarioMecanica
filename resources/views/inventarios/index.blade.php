@@ -1,77 +1,97 @@
-
 @extends('layouts.app')
 
+@section('title', 'Sistema de Inventario')
 
+@section('body-class', 'inventario-page')
 
 @section('content')
 
-<div class="container">
 
+      <div class="container">
 
+                  <div class="section text-left">
+      <h2 class="title">Módulo Gestion de Inventario</h2>
 
-    <div class="row">
-        <div class="col-lg-12 margin-tb text-right">
-            <div class="pull-left">
-            </div>
-            <div class="pull-right mb-4">
-                <a class="btn btn-danger" href="{{ route('inventarios.create') }}">Nuevo Producto</a>
-            </div>
+<a class="btn btn-danger" href="{{ route('inventarios.create') }}">Nuevo Producto</a>
 
-        </div>
+                        @if ($message = Session::get('success'))
+                            <div class="alert alert-success">
+                                <p>{{ $message }}</p>
+                            </div>
+                        @endif
 
-        <div class="col-5">
-                      <input type="text" placeholder="Buscar producto" class="form-control" name="query">
-                      <button type="submit" class="btn btn-danger mt-3">Buscar</button>
+                        </div>
 
-        </div>
+                        <div class="text-center">
+<form class="form-inline" method="get" action="{{('/search')}}">
+      <input type="text" placeholder="Buscar Producto" class="form-control" name="query">
+      <button class="btn btn-primary btn-just-icon" type="submit">
+            <i class="material-icons">search</i>
+      </button>
+</form>
 
 </div>
 
+<div class="text-center">
+                        <div class="team">
+                              <div class="row">
 
 
 
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
 
-    <table class="table table-bordered mt-4">
-        <tr>
 
-            <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Cantidad</th>
-            <th>Código</th>
-            <th width="250px">Acción</th>
-        </tr>
-        @foreach ($inventarios as $inventario)
-        <tr>
-            <td>{{ $inventario->nombre }}</td>
-            <td>{{ $inventario->descripcion }}</td>
-            <td>{{ $inventario->cantidad }}</td>
-            <td>{{ $inventario->codigo }}</td>
-            <td>
-                <form action="{{ route('inventarios.destroy',$inventario->id) }}" method="POST">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td><b>Nombre</b></td>
+                                                <td><b>Descripción</b></td>
+                                                <td><b>Cantidad</b></td>
+                                                <td><b>Código</b></td>
+                                                <td><b>Opción</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                              @foreach ($inventarios as $inventario)
+                                            <tr>
+                                                <td>{{ $inventario -> nombre}}</td>
+                                                <td>{{ $inventario -> descripcion}}</td>
+                                               <td>{{ $inventario -> cantidad}}</td>
+                                                <td>{{ $inventario -> codigo}}</td>
 
-                    <a class="btn btn-success" href="{{ route('inventarios.show',$inventario->id) }}">Ver</a>
 
-                    <a class="btn btn-primary" href="{{ route('inventarios.edit',$inventario->id) }}">Editar</a>
+                                                <td class="td-actions">
 
-                    @csrf
-                    @method('DELETE')
+                                                      <form  action="{{ route('inventarios.destroy',$inventario->id) }}" method="POST">
 
-                    <button type="submit" class="btn btn-danger">Eliminar</button>
-                </form>
-            </td>
-        </tr>
-        @endforeach
-    </table>
+                                                                <a class="btn btn-info btn-simple btn-xs"  rel="tooltip" title="Ver"href="{{ route('inventarios.show',$inventario->id) }}">   <i class="fa fa-user"></i></a>
 
-    {!! $inventarios->links() !!}
-</div>
-@endsection
+                                                                <a class="btn btn-success btn-simple btn-xs"  rel="tooltip" title="Editar" href="{{ route('inventarios.edit',$inventario->id) }}"> <i class="fa fa-edit"></i></a>
 
-@section('scripts')
-<script src="{{ asset('/js/typeahead.bundle.min.js') }}"></script>
+                                                                @csrf
+                                                                @method('DELETE')
+
+                                                                <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" > <i class="fa fa-times"></i></button>
+                                                            </form>
+
+
+
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+{{ $inventarios -> links() }}
+                              </div>
+
+                        </div>
+
+                  </div>
+
+                              </div>
+
+
+
+
+
+
 @endsection

@@ -7,12 +7,14 @@
 @section('content')
 
 
+
+
       <div class="container">
 
                   <div class="section text-left">
       <h2 class="title">Módulo Gestion de Personas</h2>
 
-  <a class="btn btn-danger" href="{{ route('personas.create') }}">Nueva Persona</a>
+  <a class="btn btn-danger" href="{{ route('users.create') }}">Nueva Persona</a>
 
                         @if ($message = Session::get('success'))
                             <div class="alert alert-success">
@@ -43,31 +45,27 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <td><b>RUT</b></td>
                                                 <td><b>Nombre</b></td>
                                                 <td><b>Correo</b></td>
-                                                <td><b>Número</b></td>
-                                                <td><b>Rol</b></td>
-                                                <td><b>Acción</b></td>
+                                                <td><b>Contraseña</b></td>
+
                                             </tr>
                                         </thead>
                                         <tbody>
-                                              @foreach ($personas as $persona)
+                                              @foreach ($users as $user)
                                             <tr>
-                                                 <td>{{ $persona->rut }}</td>
-                                                 <td>{{ $persona->nombre }}</td>
-                                                 <td>{{ $persona->correo }}</td>
-                                                 <td>{{ $persona->numero }}</td>
-                                                 <td>{{ $persona->rol }}</td>
+                                                 <td>{{ $user->name }}</td>
+                                                 <td>{{ $user->email }}</td>
+                                                 <td>{{ $user->password }}</td>
 
 
                                                 <td class="td-actions">
 
-                                                      <form action="{{ route('personas.destroy',$persona->id) }}" method="POST">
+                                                      <form action="{{ route('users.destroy',$user->id) }}" method="POST">
 
-                                                                <a class="btn btn-info btn-simple btn-xs"  rel="tooltip" title="Ver"href="{{ route('personas.show',$persona->id) }}">   <i class="fa fa-user"></i></a>
+                                                                <a class="btn btn-info btn-simple btn-xs"  rel="tooltip" title="Ver"href="{{ route('users.show',$user->id) }}">   <i class="fa fa-user"></i></a>
 
-                                                                <a class="btn btn-success btn-simple btn-xs"  rel="tooltip" title="Editar" href="{{ route('personas.edit',$persona->id) }}"> <i class="fa fa-edit"></i></a>
+                                                                <a class="btn btn-success btn-simple btn-xs"  rel="tooltip" title="Editar" href="{{ route('users.edit',$user->id) }}"> <i class="fa fa-edit"></i></a>
 
                                                                 @csrf
                                                                 @method('DELETE')
@@ -82,7 +80,7 @@
                                             @endforeach
                                         </tbody>
                                     </table>
- {!! $personas->links() !!}
+ {!! $users->links() !!}
                               </div>
 
                         </div>
