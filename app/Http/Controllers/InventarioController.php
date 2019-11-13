@@ -110,8 +110,7 @@ class InventarioController extends Controller
      * @param  \App\Inventario  $inventario
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Inventario $inventario)
-    {
+    public function destroy(Inventario $inventario){
           $inventario->delete();
 
         return redirect()->route('inventarios.index')

@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
 	<!-- CSS Files -->
-      
+
 	<link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet" />
 	<link href="{{ asset('/css/material-kit.css') }}" rel="stylesheet" />
 </head>
@@ -32,7 +32,7 @@
       			<!-- Brand and toggle get grouped for better mobile display -->
       			<div class="navbar-header">
       				<a class="navbar-brand" href="{{ url('/') }}">
-      					<img class="img" src="img/inacap_logoblanco.png" style="height: 50px">
+      					<img class="img" src="../../img/inacap_logoblanco.png" style="height: 50px">
       				</a>
       			</div>
 
@@ -52,7 +52,7 @@
       						 	<li class="dropdown">
 
                                                       <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                                                          {{ Auth::user()->name }} <span class="caret"></span>
+                                                                        Bienvenido!   {{ Auth::user()->nombres }}  {{ Auth::user()->apellidos }}<span class="caret"></span>
                                                                            </a>
 
       						         			<ul class="dropdown-menu">
@@ -100,7 +100,7 @@
                           <ul>
                                       <li>
                                             <a class="navbar-brand" href="{{ url('/') }}">
-                                                  <img class="img" src="img/logo-negro.png" style="height: 80px">
+                                                  <img class="img" src="../../img/logo-negro.png" style="height: 80px">
                                             </a>
                                       </li>
 

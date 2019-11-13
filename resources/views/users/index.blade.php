@@ -12,9 +12,7 @@
       <div class="container">
 
                   <div class="section text-left">
-      <h2 class="title">Módulo Gestion de Personas</h2>
-
-  <a class="btn btn-danger" href="{{ route('users.create') }}">Nueva Persona</a>
+      <h2 class="title">Módulo Gestion de Usuarios</h2>
 
                         @if ($message = Session::get('success'))
                             <div class="alert alert-success">
@@ -23,7 +21,7 @@
                         @endif
 
                         </div>
-
+<a class="btn btn-primary" href="{{ route('users.create') }}">Nuevo Usuario</a>
                         <div class="text-center">
 <form class="form-inline" method="get" action="{{('/search')}}">
       <input type="text" placeholder="Buscar Producto" class="form-control" name="query">
@@ -45,18 +43,19 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <td><b>Nombre</b></td>
+                                                <td><b>Nombres</b></td>
+                                                <td><b>Apellidos</b></td>
+                                                <td><b>Número de contacto</b></td>
                                                 <td><b>Correo</b></td>
-                                                <td><b>Contraseña</b></td>
-
                                             </tr>
                                         </thead>
                                         <tbody>
                                               @foreach ($users as $user)
                                             <tr>
-                                                 <td>{{ $user->name }}</td>
+                                                 <td>{{ $user->nombres }}</td>
+                                                 <td>{{ $user->apellidos }}</td>
+                                                 <td>{{ $user->numero }}</td>
                                                  <td>{{ $user->email }}</td>
-                                                 <td>{{ $user->password }}</td>
 
 
                                                 <td class="td-actions">

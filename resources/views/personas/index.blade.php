@@ -12,7 +12,7 @@
                   <div class="section text-left">
       <h2 class="title">Módulo Gestion de Personas</h2>
 
-  <a class="btn btn-danger" href="{{ route('personas.create') }}">Nueva Persona</a>
+  <a class="btn btn-primary" href="{{ route('personas.create') }}">Nueva Persona</a>
 
                         @if ($message = Session::get('success'))
                             <div class="alert alert-success">

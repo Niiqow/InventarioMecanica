@@ -37,12 +37,25 @@ class UserController extends Controller
     public function store(Request $request)
     {
           $request->validate([
-            'name' => 'required',
-            'mail' => 'required',
+            'nombres' => 'required',
+            'apellidos' => 'required',
+            'numero' => 'required',
+            'email' => 'required',
             'password' => 'required',
         ]);
 
-        User::create($request->all());
+        $user=User::create($request->all());
+
+
+    $user->nombres = $request->nombres;
+      $user->apellidos = $request->apellidos;
+      $user->numero = $request->numero;
+    $user->email = $request->email;
+    $user->password = bcrypt($request->password); // Se encripta la contraseña usando la función bcrypt().
+    $user->save(); // Se guarda el registro en la base de datos.
+
+
+
 
         return redirect()->route('users.index')
                         ->with('success','Usuario agregado exitosamente.');
@@ -80,9 +93,10 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
           $request->validate([
-               'name' => 'required',
-               'mail' => 'required',
-               'password' => 'required',
+                'nombres' => 'required',
+                'apellidos' => 'required',
+                'numero' => 'required',
+                'email' => 'required',
 
          ]);
 
@@ -105,4 +119,22 @@ class UserController extends Controller
        return redirect()->route('users.index')
                         ->with('success','Usuario eliminado exitosamente');
     }
+
+
+
+    public function profileUpdate(Request $request){
+
+          $data = $request->all();
+
+          if($data['password'] !=null)
+            $data['password'] = bcrypt($data['password']);
+
+          auth()->user()->update($data);
+
+          if($update)
+                  return redirect()->route('profile')->with('success', 'Perfil actualizado.');
+
+                  return redirect()->back()->with('error', 'Perfil no se pudo actualizar.');
+
+   }
 }

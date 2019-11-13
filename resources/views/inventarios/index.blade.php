@@ -12,7 +12,7 @@
                   <div class="section text-left">
       <h2 class="title">Módulo Gestion de Inventario</h2>
 
-<a class="btn btn-danger" href="{{ route('inventarios.create') }}">Nuevo Producto</a>
+<a class="btn btn-primary" href="{{ route('inventarios.create') }}">Nuevo Producto</a>
 
                         @if ($message = Session::get('success'))
                             <div class="alert alert-success">
