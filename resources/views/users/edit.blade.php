@@ -11,7 +11,7 @@
                 <h2 class="text-center">Editar Usuario</h2>
             </div>
             <div class="pull-right mb-4 mt-4">
-                <a class="btn btn-danger" href="{{ route('users.index') }}">Volver</a>
+                <a class="btn btn-primary" href="{{ route('users.index') }}">Volver</a>
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
 
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-              <button type="submit" class="btn btn-danger">Editar</button>
+              <button type="submit" class="btn btn-primary">Editar</button>
             </div>
         </div>
 

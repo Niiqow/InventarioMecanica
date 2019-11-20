@@ -47,6 +47,7 @@
                                                 <td><b>Apellidos</b></td>
                                                 <td><b>Número de contacto</b></td>
                                                 <td><b>Correo</b></td>
+                                                <td><b>Acción</b></td>
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -9,7 +9,7 @@
                 <h2 class="text-center">Ver Persona</h2>
             </div>
             <div class="pull-right mb-5 mt-4">
-                <a class="btn btn-danger" href="{{ route('personas.index') }}">Volver</a>
+                <a class="btn btn-primary" href="{{ route('personas.index') }}">Volver</a>
             </div>
         </div>
     </div>

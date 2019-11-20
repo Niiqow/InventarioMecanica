@@ -8,7 +8,7 @@
             <h2 class="text-center">Nueva Persona</h2>
         </div>
         <div class="pull-right mb-4 mt-4">
-            <a class="btn btn-danger" href="{{ route('personas.index') }}">Volver</a>
+            <a class="btn btn-primary" href="{{ route('personas.index') }}">Volver</a>
         </div>
     </div>
 </div>
@@ -68,7 +68,7 @@
 
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-danger">Agregar</button>
+                <button type="submit" class="btn btn-primary">Agregar</button>
         </div>
     </div>
 

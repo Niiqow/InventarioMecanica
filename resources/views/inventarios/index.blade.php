@@ -9,18 +9,20 @@
 
       <div class="container">
 
-                  <div class="section text-left">
-      <h2 class="title">Módulo Gestion de Inventario</h2>
+                                    <div class="section text-left">
+                              <h2 class="title">Módulo Gestion de Personas</h2>
+
+                                          @if ($message = Session::get('success'))
+                                              <div class="alert alert-success">
+                                                  <p>{{ $message }}</p>
+                                              </div>
+                                          @endif
+
+                                          </div>
+
 
 <a class="btn btn-primary" href="{{ route('inventarios.create') }}">Nuevo Producto</a>
 
-                        @if ($message = Session::get('success'))
-                            <div class="alert alert-success">
-                                <p>{{ $message }}</p>
-                            </div>
-                        @endif
-
-                        </div>
 
                         <div class="text-center">
 <form class="form-inline" method="get" action="{{('/search')}}">
@@ -35,35 +37,31 @@
 <div class="text-center">
                         <div class="team">
                               <div class="row">
-
-
-
-
-
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <td><b>Nombre</b></td>
-                                                <td><b>Descripción</b></td>
-                                                <td><b>Cantidad</b></td>
-                                                <td><b>Código</b></td>
-                                                <td><b>Opción</b></td>
+                                                 <td><b>Código de inventario</b></td>
+                                                  <td><b>Código Blanco</b></td>
+                                                <td><b>Equipo</b></td>
+                                                <td><b>Especificación Técnica Detallada</b></td>
+                                                <td><b>Cantidad Total existente en Sede</b></td>
+                                                <td><b>Acción</b></td>
                                             </tr>
                                         </thead>
                                         <tbody>
                                               @foreach ($inventarios as $inventario)
                                             <tr>
-                                                <td>{{ $inventario -> nombre}}</td>
-                                                <td>{{ $inventario -> descripcion}}</td>
-                                               <td>{{ $inventario -> cantidad}}</td>
-                                                <td>{{ $inventario -> codigo}}</td>
-
+                                                <td>{{ $inventario -> codigo_inventario}}</td>
+                                                <td>{{ $inventario -> codigo_blanco}}</td>
+                                               <td>{{ $inventario -> equipo}}</td>
+                                                <td>{{ $inventario -> especificacion_detallada}}</td>
+                                                      <td>{{ $inventario -> cantidad_sede}}</td>
 
                                                 <td class="td-actions">
 
                                                       <form  action="{{ route('inventarios.destroy',$inventario->id) }}" method="POST">
 
-                                                                <a class="btn btn-info btn-simple btn-xs"  rel="tooltip" title="Ver"href="{{ route('inventarios.show',$inventario->id) }}">   <i class="fa fa-user"></i></a>
+                                                                <a class="btn btn-info btn-simple btn-xs"  rel="tooltip" title="Ver"href="{{ route('inventarios.show',$inventario->id) }}"> <i class="material-icons">visibility</i></a>
 
                                                                 <a class="btn btn-success btn-simple btn-xs"  rel="tooltip" title="Editar" href="{{ route('inventarios.edit',$inventario->id) }}"> <i class="fa fa-edit"></i></a>
 

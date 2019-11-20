@@ -9,18 +9,20 @@
 
       <div class="container">
 
-                  <div class="section text-left">
-      <h2 class="title">Módulo Gestion de Personas</h2>
+
+                        <div class="section text-left">
+                  <h2 class="title">Módulo Gestion de Personas</h2>
+
+                              @if ($message = Session::get('success'))
+                                  <div class="alert alert-success">
+                                      <p>{{ $message }}</p>
+                                  </div>
+                              @endif
+
+                              </div>
 
   <a class="btn btn-primary" href="{{ route('personas.create') }}">Nueva Persona</a>
 
-                        @if ($message = Session::get('success'))
-                            <div class="alert alert-success">
-                                <p>{{ $message }}</p>
-                            </div>
-                        @endif
-
-                        </div>
 
                         <div class="text-center">
 <form class="form-inline" method="get" action="{{('/search')}}">
