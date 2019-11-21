@@ -10,8 +10,8 @@
       <div class="container">
 
                                     <div class="section text-left">
-                              <h2 class="title">Módulo Gestion de Personas</h2>
-
+                              <h2 class="title text-center">Módulo Gestión Inventario de Equipos</h2>
+<a class="btn btn-primary" href="{{ route('inventarios.create') }}">Nuevo Producto</a>
                                           @if ($message = Session::get('success'))
                                               <div class="alert alert-success">
                                                   <p>{{ $message }}</p>
@@ -21,10 +21,13 @@
                                           </div>
 
 
-<a class="btn btn-primary" href="{{ route('inventarios.create') }}">Nuevo Producto</a>
 
+<div class="text-right">
+       <a class="btn btn-primary text-rigth" href="{{ route('insumos.index') }}">Inventario de Insumos</a>
+</div>
 
                         <div class="text-center">
+
 <form class="form-inline" method="get" action="{{('/search')}}">
       <input type="text" placeholder="Buscar Producto" class="form-control" name="query">
       <button class="btn btn-primary btn-just-icon" type="submit">
@@ -55,7 +58,7 @@
                                                 <td>{{ $inventario -> codigo_blanco}}</td>
                                                <td>{{ $inventario -> equipo}}</td>
                                                 <td>{{ $inventario -> especificacion_detallada}}</td>
-                                                      <td>{{ $inventario -> cantidad_sede}}</td>
+                                                <td>{{ $inventario -> cantidad_sede}}</td>
 
                                                 <td class="td-actions">
 
@@ -68,7 +71,7 @@
                                                                 @csrf
                                                                 @method('DELETE')
 
-                                                                <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" > <i class="fa fa-times"></i></button>
+                                                                <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" onclick="return confirm('¿Estás Seguro?')"> <i class="fa fa-times"></i></button>
                                                             </form>
 
 

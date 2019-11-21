@@ -3,16 +3,11 @@
 <div class="container">
 
 
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left  mb-4 mt-4">
-                <h2 class="text-center">Ver Producto</h2>
+      <div class="section text-center">
+      <h2 class="title">Ver Equipo</h2>
+
+      <a class="btn btn-primary" href="{{ route('inventarios.index') }}">Volver</a>
             </div>
-            <div class="pull-right mb-5 mt-4">
-                <a class="btn btn-primary" href="{{ route('inventarios.index') }}">Volver</a>
-            </div>
-        </div>
-    </div>
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">

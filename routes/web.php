@@ -14,6 +14,10 @@ Route::middleware(['admin'])->group(function () {
 
       Route::resource('personas','PersonaController');
 
+      Route::resource('maquinarias','ProductController');
+
+      Route::resource('insumos','InsumoController');
+
       Route::resource('users','UserController');
 
       Route::get('/search','SearchController@show');

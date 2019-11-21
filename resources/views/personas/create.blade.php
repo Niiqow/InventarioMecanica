@@ -3,15 +3,12 @@
 @section('content')
 <div class="container">
 <div class="row">
-    <div class="col-lg-12 margin-tb">
-        <div class="pull-left">
-            <h2 class="text-center">Nueva Persona</h2>
-        </div>
-        <div class="pull-right mb-4 mt-4">
-            <a class="btn btn-primary" href="{{ route('personas.index') }}">Volver</a>
-        </div>
-    </div>
-</div>
+
+      <div class="section text-center">
+<h2 class="title">Nueva Persona</h2>
+
+ <a class="btn btn-primary" href="{{ route('personas.index') }}">Volver</a>
+            </div>
 
 @if ($errors->any())
     <div class="alert alert-danger">

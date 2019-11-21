@@ -18,7 +18,7 @@ class CreatePersonasTable extends Migration
                    $table->string('rut');
                    $table->string('nombre');
                    $table->string('correo');
-                   $table->integer('numero');
+                   $table->string('numero');
                    $table->string('rol');
                    $table->timestamps();
         });

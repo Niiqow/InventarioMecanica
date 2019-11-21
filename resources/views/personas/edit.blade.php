@@ -6,15 +6,12 @@
 
 
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2 class="text-center">Editar Persona</h2>
-            </div>
-            <div class="pull-right mb-4 mt-4">
-                <a class="btn btn-primary" href="{{ route('personas.index') }}">Volver</a>
-            </div>
-        </div>
-    </div>
+          <div class="section text-center">
+   <h2 class="title">Editar Persona</h2>
+
+     <a class="btn btn-primary" href="{{ route('personas.index') }}">Volver</a>
+                </div>
+
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -55,28 +52,26 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Número:</strong>
-                   <input type="number" name="numero" value="{{ $persona->numero }}" class="form-control" placeholder="Número">
+                   <input type="text" name="numero" value="{{ $persona->numero }}" class="form-control" placeholder="Número">
                 </div>
             </div>
+
+
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                      <div class="row">
-
-                  <div class="col-1">
-                        <strong>Rol:</strong>
-                  </div>
-                  <div class="text-danger ml-0">
-                        <strong>*CONFIRMAR*</strong>
-                  </div>
-                  </div>
-                    <select class="form-control" type="text" name="rol" class="form-control" placeholder="Rol">
-         <option>Estudiante</option>
-          <option>Docente</option>
-      </select>
+                      <div class="col-1">
+                           <strong>Rol:</strong>
+                      </div>
+                      <div class="text-danger ml-0">
+                           <strong>*CONFIRMAR*</strong>
+                      </div>
+                       <select class="form-control" type="text" name="rol" class="form-control" placeholder="Rol">
+             <option>Estudiante</option>
+             <option>Docente</option>
+          </select>
                 </div>
             </div>
-
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Editar</button>

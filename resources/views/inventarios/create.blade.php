@@ -1,135 +1,118 @@
 @extends('layouts.app')
 
-@section('title', 'Sistema de Inventario')
-
-@section('body-class', 'inventario-page')
-
 @section('content')
+<div class="container">
+      <div class="section text-center">
+      <h2 class="title">Nuevo Equipo</h2>
+
+      <a class="btn btn-primary" href="{{ route('inventarios.index') }}">Volver</a>
+            </div>
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <strong>Atención!</strong> Por favor Verifique que todos los campos que esten completados<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+<form action="{{ route('inventarios.store') }}" method="POST">
+    @csrf
+     <div class="row">
 
 
-      <div class="container ">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Código Inventario:</strong>
+                <input type="text" name="codigo_inventario" class="form-control" placeholder="Ejemplo: 250000005953">
+            </div>
+        </div>
 
-                  <div class="section text-center">
-                        <h2 class="title">Registrar nuevo producto</h2>
-<a class="btn btn-primary" href="{{ route('inventarios.index') }}">Volver</a>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Código Blanco:</strong>
+                <input type="text" name="codigo_blanco" class="form-control" placeholder="Ejemplo: 25000000074666">
+            </div>
+       </div>
 
+       <div class="col-xs-12 col-sm-12 col-md-12">
+           <div class="form-group">
+              <strong>Equipo:</strong>
+              <input type="text" name="equipo" class="form-control" placeholder="Ejemplo: Medidor de potencia">
+           </div>
+      </div>
 
+      <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="form-group">
+             <strong>Especificación Técnica Detalladar:</strong>
+             <input type="text" name="especificacion_detallada" class="form-control" placeholder="Ejemplo: PCE / PCM1">
+          </div>
+     </div>
 
+     <div class="col-xs-12 col-sm-12 col-md-12">
+         <div class="form-group">
+            <strong>Carrera(s) que Utiliza el Equipo:</strong>
+            <input type="text" name="nombre_carrera" class="form-control" placeholder="Ejemplo: Mantenimiento Industrial">
+         </div>
+    </div>
 
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+           <strong>Código(s)-Nombre(s) de Asignatura(s):</strong>
+           <input type="text" name="asignatura" class="form-control" placeholder="Ejemplo: Fundamentos de la Electricidad Industrial">
+        </div>
+   </div>
 
-                        <form action="{{ route('inventarios.store') }}" method="POST">
-                              @csrf
+   <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="form-group">
+          <strong>Lugar de Almacenamiento:</strong>
+          <input type="text" name="lugar_almacenamiento" class="form-control" placeholder="Ejemplo: Estante 2, nivel 2">
+      </div>
+ </div>
 
-                              <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+       <div class="form-group">
+           <strong>Cantidad Total Existente en la Sede:</strong>
+           <input type="text" name="cantidad_sede" class="form-control" placeholder="Ejemplo: 1">
+       </div>
+  </div>
 
-                  <div class="col-sm-4">
-                        <div class="form-group label-floating">
-                  <label class="control-label">Código Inventario:</label>
-                  <input type="text" class="form-control" name="codigo_inventario">
-                              </div>
-                        </div>
-                              </div>
-<div class="row">
-
-                              <div class="col-sm-4">
-                                    <div class="form-group label-floating">
-                                          <label class="control-label">Código Blanco:</label>
-                                          <input type="text" class="form-control" name="codigo_blanco">
-                                    </div>
-                              </div>
+  <div class="col-xs-12 col-sm-12 col-md-12">
+     <div class="form-group">
+         <strong>Valor Unitario:</strong>
+         <input type="text" name="valor_unitario" class="form-control" placeholder="Ejemplo: $189.900">
+     </div>
 </div>
 
-<div class="row">
-                              <div class="col-sm-4">
-                                    <div class="form-group label-floating">
-                                          <label class="control-label">Equipo:</label>
-                                          <input type="text" class="form-control" name="equipo">
-                                    </div>
-                              </div>
-</div>
-<div class="row">
-                              <div class="col-sm-4">
-                                    <div class="form-group label-floating">
-                                          <label class="control-label">Especificación Técnica Detallada:</label>
-                                          <input type="text" class="form-control" name="especificacion_detallada">
-                                    </div>
-                              </div>
+<div class="col-xs-12 col-sm-12 col-md-12">
+   <div class="form-group">
+       <strong>Valor Total:</strong>
+       <input type="text" name="valor_total" class="form-control" placeholder="Ejemplo: $226.909">
+   </div>
 </div>
 
-
-<div class="row">
-                              <div class="col-sm-4">
-                                    <div class="form-group label-floating">
-                                          <label class="control-label">Carrera(s) que Utiliza el Equipo:</label>
-                                          <input type="text" class="form-control" name="nombre_carrera">
-                                    </div>
-                              </div>
+<div class="col-xs-12 col-sm-12 col-md-12">
+   <div class="form-group">
+       <strong>Observaciones:</strong>
+       <input type="text" name="observaciones" class="form-control" placeholder="Ejemplo: Valorizado BDO">
+   </div>
 </div>
 
-<div class="row">
-                              <div class="col-sm-4">
-                                    <div class="form-group label-floating">
-                                          <label class="control-label">Código(s)-Nombre(s) de Asignatura(s):</label>
-                                          <input type="text" class="form-control" name="asignatura">
-                                    </div>
-                              </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">Agregar</button>
+    </div>
 </div>
 
-<div class="row">
-                              <div class="col-sm-4">
-                                    <div class="form-group label-floating">
-                                          <label class="control-label">Lugar de Almacenamiento:</label>
-                                          <input type="text" class="form-control" name="lugar_almacenamiento">
-                                    </div>
-                              </div>
-</div>
-
-<div class="row">
-                              <div class="col-sm-4">
-                                    <div class="form-group label-floating">
-                                          <label class="control-label">Cantidad Total Existente en la Sede:</label>
-                                          <input type="text" class="form-control" name="cantidad_sede">
-                                    </div>
-                              </div>
-</div>
-
-<div class="row">
-                              <div class="col-sm-4">
-                                    <div class="form-group label-floating">
-                                          <label class="control-label">Valor Unitario:</label>
-                                          <input type="text" class="form-control" name="valor_unitario">
-                                    </div>
-                              </div>
-</div>
-
-<div class="row">
-                              <div class="col-sm-4">
-                                    <div class="form-group label-floating">
-                                          <label class="control-label">Valor Total:</label>
-                                          <input type="text" class="form-control" name="valor_total">
-                                    </div>
-                              </div>
-</div>
-
-<div class="row">
-                              <div class="col-sm-4">
-                                    <div class="form-group label-floating">
-                                          <label class="control-label">Observaciones:</label>
-                                          <input type="text" class="form-control" name="observaciones">
-                                    </div>
-                              </div>
-</div>
-
-<div class="row">
-                              <button type="submit" class="btn btn-primary">Agregar</button>
-
-                              </div>
-
-                        </form>
+          </div>
+      </div>
 
 
-                                    </div>
-                              </div>
 
 
+
+</form>
+ </div>
 @endsection

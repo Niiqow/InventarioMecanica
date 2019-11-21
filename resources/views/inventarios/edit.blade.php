@@ -5,18 +5,11 @@
 <div class="container">
 
 
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2 class="text-center">Editar Producto</h2>
-            </div>
-            <div class="pull-right mb-4 mt-4">
-                <a class="btn btn-primary" href="{{ route('inventarios.index') }}">Volver</a>
-            </div>
-        </div>
-    </div>
+      <div class="section text-center">
+      <h2 class="title">Editar Equipo</h2>
 
-
+      <a class="btn btn-primary" href="{{ route('inventarios.index') }}">Volver</a>
+            </div>
 
     <form action="{{ route('inventarios.update',$inventario->id) }}" method="POST">
         @csrf
