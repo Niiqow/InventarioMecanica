@@ -9,9 +9,9 @@
 
       <div class="container">
 
-
-                        <div class="section text-left">
-                  <h2 class="title">Módulo Gestion de Personas</h2>
+            <div class="section text-left">
+      <h2 class="title text-center">Módulo Gestión de Personas</h2>
+<a class="btn btn-primary" href="{{ route('personas.create') }}">Nueva Persona</a>
 
                               @if ($message = Session::get('success'))
                                   <div class="alert alert-success">
@@ -20,8 +20,6 @@
                               @endif
 
                               </div>
-
-  <a class="btn btn-primary" href="{{ route('personas.create') }}">Nueva Persona</a>
 
 
                         <div class="text-center">
@@ -74,7 +72,7 @@
                                                                 @csrf
                                                                 @method('DELETE')
 
-                                                                <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" > <i class="fa fa-times"></i></button>
+                                                                <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" > <i class="fa fa-times" onclick="return confirm('¿Estas seguro de ELIMINAR?')"></></i></button>
                                                             </form>
 
 

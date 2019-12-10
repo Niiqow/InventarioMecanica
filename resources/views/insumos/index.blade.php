@@ -76,7 +76,7 @@
                                                                 @csrf
                                                                 @method('DELETE')
 
-                                                                <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" > <i class="fa fa-times"></i></button>
+                                                                <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" onclick="return confirm('¿Estas seguro de ELIMINAR este insumo?')"> <i class="fa fa-times" ></i></button>
                                                             </form>
 
 

@@ -15,6 +15,12 @@ class CreateMaquinariasTable extends Migration
     {
         Schema::create('maquinarias', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('codigo');
+            $table->integer('semestre');
+            $table->string('asignatura');
+            $table->string('nombre');
+            $table->string('especificacion_tecnica');
+            $table->integer('cantidad');
             $table->timestamps();
         });
     }

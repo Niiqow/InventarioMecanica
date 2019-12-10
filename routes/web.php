@@ -3,7 +3,7 @@
 
 
 Route::get('/', function () {
-    return view('user');
+    return view('home');
 });
 
 Auth::routes();
@@ -12,15 +12,24 @@ Route::middleware(['admin'])->group(function () {
 
       Route::resource('inventarios','InventarioController');
 
+
       Route::resource('personas','PersonaController');
 
-      Route::resource('maquinarias','ProductController');
+      Route::resource('maquinarias','MaquinariaController');
 
       Route::resource('insumos','InsumoController');
 
       Route::resource('users','UserController');
 
+      Route::resource('vidrios','VidrioController');
+
+      Route::resource('plan_estudio','PlanEstudioController');
+
+            Route::resource('ingMVS','ingMVSController');
+
       Route::get('/search','SearchController@show');
+
+
 
 
 

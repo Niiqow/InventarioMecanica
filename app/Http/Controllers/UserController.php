@@ -18,15 +18,7 @@ class UserController extends Controller
          return view('users.index',compact('users'))->with('i',(request()->input('page',1)-1)*5);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-   return view('users.create');
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -119,22 +111,4 @@ class UserController extends Controller
        return redirect()->route('users.index')
                         ->with('success','Usuario eliminado exitosamente');
     }
-
-
-
-    public function profileUpdate(Request $request){
-
-          $data = $request->all();
-
-          if($data['password'] !=null)
-            $data['password'] = bcrypt($data['password']);
-
-          auth()->user()->update($data);
-
-          if($update)
-                  return redirect()->route('profile')->with('success', 'Perfil actualizado.');
-
-                  return redirect()->back()->with('error', 'Perfil no se pudo actualizar.');
-
-   }
 }

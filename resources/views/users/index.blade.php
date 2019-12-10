@@ -11,8 +11,9 @@
 
       <div class="container">
 
-                  <div class="section text-left">
-      <h2 class="title">Módulo Gestion de Usuarios</h2>
+            <div class="section text-left">
+      <h2 class="title text-center">Módulo Gestión de usuarios</h2>
+<a class="btn btn-primary" href="{{ route('register') }}">Nuevo Usuario</a>
 
                         @if ($message = Session::get('success'))
                             <div class="alert alert-success">
@@ -21,7 +22,7 @@
                         @endif
 
                         </div>
-<a class="btn btn-primary" href="{{ route('users.create') }}">Nuevo Usuario</a>
+
                         <div class="text-center">
 <form class="form-inline" method="get" action="{{('/search')}}">
       <input type="text" placeholder="Buscar Producto" class="form-control" name="query">
@@ -63,14 +64,13 @@
 
                                                       <form action="{{ route('users.destroy',$user->id) }}" method="POST">
 
-                                                                <a class="btn btn-info btn-simple btn-xs"  rel="tooltip" title="Ver"href="{{ route('users.show',$user->id) }}">   <i class="fa fa-user"></i></a>
 
                                                                 <a class="btn btn-success btn-simple btn-xs"  rel="tooltip" title="Editar" href="{{ route('users.edit',$user->id) }}"> <i class="fa fa-edit"></i></a>
 
                                                                 @csrf
                                                                 @method('DELETE')
 
-                                                                <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" > <i class="fa fa-times"></i></button>
+                                                                <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" > <i class="fa fa-times" onclick="return confirm('¿Estas seguro de ELIMINAR?')"></i></button>
                                                             </form>
 
 

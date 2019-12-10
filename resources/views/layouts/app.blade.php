@@ -59,6 +59,7 @@
       		 <li><a href="{{ url('/personas') }}">Gestionar Personas</a></li>
       		<li><a href="{{ url('/inventarios') }}">Gestionar Inventario</a></li>
                   <li><a href="{{ url('/users') }}">Gestionar Usuarios</a></li>
+                  <li><a href="{{ url('/plan_estudio') }}">Estándar de Equipamiento</a></li>
       	@endif
       	 <li><a href="{{ url('/configuracion') }}">Configuración</a></li>
       	  <li class="divider"></li>

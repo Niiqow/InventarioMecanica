@@ -58,12 +58,13 @@ class InventarioController extends Controller
              'valor_unitario',
              'valor_total',
              'observaciones',
+             'users_id',
         ]);
 
         Inventario::create($request->all());
 
         return redirect()->route('inventarios.index')
-                        ->with('success','Producto agregado exitosamente.');
+                        ->with('success','Equipo agregado exitosamente.');
     }
 
     /**
@@ -115,7 +116,7 @@ class InventarioController extends Controller
           $inventario->update($request->all());
 
           return redirect()->route('inventarios.index')
-                          ->with('success','Producto actualizado exitosamente');
+                          ->with('success','Equipo actualizado exitosamente');
     }
 
     /**
@@ -128,6 +129,6 @@ class InventarioController extends Controller
           $inventario->delete();
 
         return redirect()->route('inventarios.index')
-                        ->with('success','Producto eliminado exitosamente');
+                        ->with('success','Equipo eliminado exitosamente');
     }
 }

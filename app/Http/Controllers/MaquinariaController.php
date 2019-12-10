@@ -12,9 +12,16 @@ class MaquinariaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         $this->middleware('auth');
+     }
+
     public function index()
     {
-        //
+          $maquinarias = Maquinaria::latest()->paginate(5);
+          return view('maquinarias.index',compact('maquinarias'))->with('i',(request()->input('page',1)-1)*5);
     }
 
     /**
@@ -24,7 +31,7 @@ class MaquinariaController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +42,7 @@ class MaquinariaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -46,7 +53,7 @@ class MaquinariaController extends Controller
      */
     public function show(Maquinaria $maquinaria)
     {
-        //
+
     }
 
     /**

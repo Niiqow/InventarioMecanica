@@ -18,10 +18,10 @@ class CreateUsersTable extends Migration
             $table->string('nombres');
             $table->string('apellidos');
             $table->string('numero');
-            $table->string('email')->unique();
+            $table->string('email')->unique();  //Verifica si el email ya se encuentra registrado.
             $table->string('password');
             $table->boolean('admin')->default(false);
-            $table->rememberToken();
+            $table->rememberToken(); // Se utiliza para ayudar contra el Remember Me (secuestro de cookies). El valor se actualiza al iniciar y cerrar sesión. Si una persona malintencionada secuestra una cookie, cerrar sesión hace que la cookie secuestrada sea inútil ya que ya no coincide.
             $table->timestamps();
         });
     }

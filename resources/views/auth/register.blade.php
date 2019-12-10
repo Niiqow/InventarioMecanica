@@ -73,7 +73,7 @@
                                     <div class="footer text-center">
 
 
-                                          <button type="submit" class="btn btn-simple btn-primary btn-lg">
+                                          <button type="submit" class="btn btn-simple btn-primary btn-lg" >
                                               {{ __('Registrarse') }}
                                           </button>
                                     </div>
