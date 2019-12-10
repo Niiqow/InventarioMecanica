@@ -5,19 +5,23 @@
             <div class="row">
                   <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                         <div class="card card-signup">
-                              <form class="form" method="POST" action="{{ route('register') }}">
-                                    @csrf
 
+                              <div>
                                     @if ($errors->any())
                                         <div class="alert alert-danger">
-                                            <strong>Atención!</strong> Por favor Verifique que todos los campos que esten completados<br><br>
-                                            <ul>
+                                           <strong>Atención!</strong> Por favor Verifique que todos los campos que esten completados<br><br>
+                                           <ul>
                                                 @foreach ($errors->all() as $error)
                                                     <li>{{ $error }}</li>
                                                 @endforeach
-                                            </ul>
+                                           </ul>
                                         </div>
                                     @endif
+                              </div>
+                              <form class="form" method="POST" action="{{ route('register') }}">
+                                    @csrf
+
+
                                     <div class="header header-primary text-center">
                                           <h4>Registrarse</h4>
 
