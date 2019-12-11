@@ -22,16 +22,7 @@
                               </div>
 
 
-                        <div class="text-center">
-<form class="form-inline" method="get" action="{{('/search')}}">
-      <input type="text" placeholder="Buscar Producto" class="form-control" name="query">
-      <button class="btn btn-primary btn-just-icon" type="submit">
-            <i class="material-icons">search</i>
-      </button>
-</form>
-
-</div>
-
+            
 <div class="text-center">
                         <div class="team">
                               <div class="row">
