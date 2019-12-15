@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMaquinariasTable extends Migration
+class CreateIngMVSRelacionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateMaquinariasTable extends Migration
      */
     public function up()
     {
-        Schema::create('maquinarias', function (Blueprint $table) {
+        Schema::create('ing_m_v_s_relacions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('codigo');
             $table->integer('semestre');
@@ -32,6 +32,6 @@ class CreateMaquinariasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('maquinarias');
+        Schema::dropIfExists('ing_m_v_s_relacions');
     }
 }

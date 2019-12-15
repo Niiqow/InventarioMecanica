@@ -25,15 +25,17 @@ Route::middleware(['admin'])->group(function () {
 
       Route::resource('plan_estudio','PlanEstudioController');
 
-            Route::resource('ingMVS','ingMVSController');
+      Route::resource('ingMVS','ingMVSController');
 
-      Route::get('/search','SearchController@show');
+      Route::resource('ingMVSEquiposA','ingMVSEquiposAController');
 
+      Route::resource('ingMVSEquipos','ingMVSEquiposController');
 
+      Route::resource('ingMVSFisica','ingMVSFisicaController');
 
+      Route::resource('ingMVSInsumos','ingMVSInsumosController');
 
-
-
+      Route::resource('ingMVSRelacion','ingMVSRelacionController');
 
 });
 

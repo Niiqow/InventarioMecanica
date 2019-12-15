@@ -31,6 +31,6 @@ class CreateVidriosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('material_vidrios');
+        Schema::dropIfExists('vidrios');
     }
 }
