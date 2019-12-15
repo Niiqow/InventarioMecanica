@@ -46,9 +46,9 @@
 
                                           <div class="input-group">
                                                 <span class="input-group-addon">
-                                                      <i class="material-icons">person</i>
+                                                      <i class="material-icons">phone</i>
                                                 </span>
-                                     <input id="numero" type="text" class="form-control @error('numero') is-invalid @enderror" name="numero" value="{{ old('numero') }}" required autocomplete="numero" autofocus placeholder="Numero">
+                                     <input id="numero" type="number" class="form-control @error('numero') is-invalid @enderror" name="numero" value="{{ old('numero') }}" required autocomplete="numero" autofocus placeholder="Numero">
                                           </div>
 
                                           <div class="input-group">

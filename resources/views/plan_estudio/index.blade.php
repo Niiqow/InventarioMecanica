@@ -25,7 +25,7 @@
 
 <div class="text-center">
       <h3>Ingeniería Mecánica en Mantenimiento Industrial</h3>
-      <a class="btn btn-primary" href="{{ route('maquinarias.index') }}">Ingresar</a>
+      <a class="btn btn-primary" href="{{ route('ingMMI.index') }}">Ingresar</a>
 </div>
 
 <div>

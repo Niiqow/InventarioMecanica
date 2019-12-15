@@ -53,7 +53,7 @@
       <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
              <strong>Cantidad Total Existente en el Laboratorio / Taller:</strong>
-             <input type="text" name="cantidad_total" class="form-control" placeholder="Ejemplo: 1">
+             <input type="number" name="cantidad_total" class="form-control" placeholder="Ejemplo: 1">
           </div>
      </div>
 

@@ -27,14 +27,14 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Código Inventario:</strong>
-                <input type="text" name="codigo_inventario" class="form-control" placeholder="Ejemplo: 250000005953">
+                <input type="number" name="codigo_inventario" class="form-control" placeholder="Ejemplo: 250000005953">
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Código Blanco:</strong>
-                <input type="text" name="codigo_blanco" class="form-control" placeholder="Ejemplo: 25000000074666">
+                <input type="number" name="codigo_blanco" class="form-control" placeholder="Ejemplo: 25000000074666">
             </div>
        </div>
 
@@ -76,28 +76,28 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
        <div class="form-group">
            <strong>Cantidad Total Existente en la Sede:</strong>
-           <input type="text" name="cantidad_sede" class="form-control" placeholder="Ejemplo: 1">
+           <input type="number" name="cantidad_sede" class="form-control" placeholder="Ejemplo: 1">
        </div>
   </div>
 
   <div class="col-xs-12 col-sm-12 col-md-12">
      <div class="form-group">
          <strong>Valor Unitario:</strong>
-         <input type="text" name="valor_unitario" class="form-control" placeholder="Ejemplo: $189.900">
+         <input type="number" name="valor_unitario" class="form-control" placeholder="Ejemplo: 189.900">
      </div>
 </div>
 
 <div class="col-xs-12 col-sm-12 col-md-12">
    <div class="form-group">
        <strong>Valor Total:</strong>
-       <input type="text" name="valor_total" class="form-control" placeholder="Ejemplo: $226.909">
+       <input type="number" name="valor_total" class="form-control" placeholder="Ejemplo: 226.909">
    </div>
 </div>
 
 <div class="col-xs-12 col-sm-12 col-md-12">
    <div class="form-group">
        <strong>Observaciones:</strong>
-       <input type="text" name="observaciones" class="form-control" placeholder="Ejemplo: Valorizado BDO">
+       <input type="text" name="observaciones" class="form-control" placeholder="Ejemplo: Valorizado BDO" value="-">
    </div>
 </div>
 

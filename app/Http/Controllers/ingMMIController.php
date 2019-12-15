@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ingMVSController extends Controller
+class ingMMIController extends Controller
 {
 
     public function __construct() {
         $this->middleware('auth');
    }
-      public function index()
+    public function index()
       {
-          return view('ingMVS.index');
+          return view('ingMMI.index');
       }
 }
+

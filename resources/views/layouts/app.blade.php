@@ -19,6 +19,7 @@
 
 	<link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet" />
 	<link href="{{ asset('/css/material-kit.css') }}" rel="stylesheet" />
+      <link rel="shortcut icon" href="{{{ asset('img/favicon.jpg') }}}"> 
 </head>
 
 
@@ -42,9 +43,7 @@
                                         <li class="nav-item">
                                            <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
                                         </li>
-                                        <li class="nav-item">
-                                           <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar') }}</a>
-                                        </li>
+                                 
                                     @else
 
       						 	<li class="dropdown">
@@ -60,8 +59,12 @@
       		<li><a href="{{ url('/inventarios') }}">Gestionar Inventario</a></li>
                   <li><a href="{{ url('/users') }}">Gestionar Usuarios</a></li>
                   <li><a href="{{ url('/plan_estudio') }}">Estándar de Equipamiento</a></li>
+
+                  @else
+
+                  <li><a href="{{ url('/inventarioVista') }}">Inventario de Equipos</a></li>
+                  <li><a href="{{ url('/insumosVista') }}">Inventario de Insumos</a></li>
       	@endif
-      	 <li><a href="{{ url('/configuracion') }}">Configuración</a></li>
       	  <li class="divider"></li>
        <li><a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
