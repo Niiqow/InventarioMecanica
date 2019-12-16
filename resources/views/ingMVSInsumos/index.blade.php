@@ -14,7 +14,6 @@
                                  <a class="btn btn-primary" href="{{ route('ingMVS.index') }}">Volver</a>
                                  </div>
                               <h2 class="title text-center">Insumos por Plan de Estudio</h2>
-<a class="btn btn-primary" href="{{ route('ingMVSInsumos.create') }}">Nuevo Insumo</a>
 
 
                                           @if ($message = Session::get('success'))

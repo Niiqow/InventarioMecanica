@@ -620,8 +620,17 @@ a .material-icons, a:hover .material-icons, a:focus .material-icons {
 .navbar .navbar-nav > li > a.btn.btn-upgrade.btn-simple:focus,
 .navbar .navbar-nav > li > a.btn.btn-upgrade.btn-simple:active {
   background-color: transparent;
-  color: #e91e63;
+  color: #f44336;
 }
+
+.colorT{
+  color: #000000;
+}
+
+.fondo{
+  background-color: #FFFFFF;
+}
+
 .btn.btn-white, .btn.btn-white:focus, .btn.btn-white:hover,
 .navbar .navbar-nav > li > a.btn.btn-white,
 .navbar .navbar-nav > li > a.btn.btn-white:focus,

@@ -15,7 +15,7 @@
                                </div>
                                    
                               <h2 class="title text-center">Equipos por Plan de Estudio</h2>
-<a class="btn btn-primary" href="{{ route('ingMVSEquipos.create') }}">Nuevo Equipo</a>
+
 
 
                                           @if ($message = Session::get('success'))

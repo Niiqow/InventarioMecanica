@@ -14,7 +14,7 @@
                                  <a class="btn btn-primary" href="{{ route('ingMMI.index') }}">Volver</a>
                                  </div>
                               <h2 class="title text-center">Equipos e insumos para la asignatura METEFM01 - Física Mecánica</h2>
-<a class="btn btn-primary" href="{{ route('MMIFisica.create') }}">Nuevo Equipo</a>
+
 
 
                                           @if ($message = Session::get('success'))

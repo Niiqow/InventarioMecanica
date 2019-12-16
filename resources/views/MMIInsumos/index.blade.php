@@ -14,7 +14,6 @@
                                  <a class="btn btn-primary" href="{{ route('ingMMI.index') }}">Volver</a>
                                  </div>
                               <h2 class="title text-center">Insumos por Plan de Estudio</h2>
-<a class="btn btn-primary" href="{{ route('MMIInsumos.create') }}">Nuevo Insumo</a>
 
 
                                           @if ($message = Session::get('success'))

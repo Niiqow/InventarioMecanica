@@ -6,13 +6,18 @@
 
 @section('content')
 
-
+<div class="fondo">
 <div class="container">
 
-                              <div class="section text-center">
 
-                        <h2 class="text-center">Sistema de Prestaciones</h2>
-          <a class="btn btn-primary " href="{{ route('prestaciones.index') }}">Ingresar</a>
+
+                              <div class="section text-center">
+                              <div class="section">
+                        <h1 class="text-center colorT">Sistema de Inventarios</h1>
+</div>
+                      
+          <a class="btn btn-primary " href="{{ route('inventarios.index') }}">Ingresar</a>
+        
                   </div>
 <div class="section">
 
@@ -25,7 +30,7 @@
 </div>
                               </div>
 
-
+</div>
 
 
 

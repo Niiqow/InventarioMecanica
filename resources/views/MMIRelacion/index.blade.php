@@ -14,8 +14,6 @@
                                  <a class="btn btn-primary" href="{{ route('ingMMI.index') }}">Volver</a>
                                  </div>
                               <h2 class="title text-center">Equipos por asignatura del Plan de Estudio</h2>
-<a class="btn btn-primary" href="{{ route('MMIRelacion.create') }}">Nuevo Equipo</a>
-
 
                                           @if ($message = Session::get('success'))
                                               <div class="alert alert-success">

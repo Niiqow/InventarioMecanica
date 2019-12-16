@@ -59,20 +59,11 @@
          </div>
     </div>
 
-
-{{ auth()->user()->name }}
-auth()->user()
-auth()->id();
-<input type="text" name="users_id" class="form-control" placeholder="Ejemplo: Cristales de seguridad">
     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-
-
-
             <button type="submit" class="btn btn-primary">Agregar</button>
     </div>
-</div>
 
-          </div>
+</div>
       </div>
 
 

@@ -18,7 +18,7 @@ class AdminMiddleware
 
 
           if(!auth()->user()->admin){
-                return redirect('/');
+                return redirect('/inventarioVista');
           }
 
 

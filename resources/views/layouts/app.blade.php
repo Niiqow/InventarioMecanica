@@ -32,7 +32,7 @@
       		<div class="container">
       			<!-- Brand and toggle get grouped for better mobile display -->
       			<div class="navbar-header">
-      				<a class="navbar-brand" href="{{ url('/') }}">
+      				<a class="navbar-brand" href="{{ url('/inventarios') }}">
       					<img class="img" src="../../img/inacap_logoblanco.png" style="height: 50px">
       				</a>
       			</div>
